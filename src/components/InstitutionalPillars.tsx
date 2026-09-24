@@ -95,7 +95,7 @@ export function InstitutionalPillars() {
           {/* Linha Prateada desenhada pelo scroll */}
           <div
             ref={lineRef}
-            className="absolute -bottom-[1px] left-0 right-0 h-[2px] bg-gradient-to-r from-[var(--brand-silver)] via-[var(--brand-silver-shine)] to-transparent will-change-transform"
+            className="absolute -bottom-[1px] left-0 right-0 h-[2px] bg-gradient-to-r from-[#000080] via-[#0047AB] to-[#82C8E5] will-change-transform"
           />
           <div className="flex items-center gap-2.5">
             <Award className="w-4 h-4 text-[var(--accent)]" />

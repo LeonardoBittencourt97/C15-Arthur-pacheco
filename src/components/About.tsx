@@ -161,7 +161,7 @@ export function About() {
             </div>
 
             {/* Citação de Proposta de Valor */}
-            <div className="about-text-anim p-4 sm:p-5 rounded-2xl bg-[var(--bg-secondary)]/70 border border-[var(--border-subtle)]/30 border-l-4 border-l-[var(--brand-silver-shine)] shadow-2xs">
+            <div className="about-text-anim p-4 sm:p-5 rounded-2xl bg-[var(--bg-secondary)]/70 border border-[var(--border-subtle)]/30 border-l-4 border-l-[var(--brand-cobalt)] shadow-2xs">
               <p className="font-heading italic text-sm sm:text-base text-[var(--text-main)] leading-relaxed">
                 &ldquo;{OFFICE_INFO.slogan}&rdquo;
               </p>
@@ -201,7 +201,7 @@ export function About() {
               <button
                 type="button"
                 onClick={handleToggleExpand}
-                className="btn-pill bg-white text-zinc-900 border-2 border-[var(--brand-silver-shine)] hover:bg-[var(--accent)] hover:text-white dark:bg-[#1C1C1C] dark:text-white dark:border-[var(--brand-silver-shine)] dark:hover:bg-[var(--accent)] dark:hover:text-black gap-2 py-3 px-6 text-xs sm:text-sm font-semibold shadow-xs hover-lift transition-all cursor-pointer flex items-center"
+                className="btn-pill bg-white text-[var(--brand-navy)] border-2 border-[var(--brand-cobalt)]/40 hover:bg-[var(--brand-cobalt)] hover:text-white dark:bg-[#0C142A] dark:text-[#82C8E5] dark:border-[#82C8E5]/50 dark:hover:bg-[#82C8E5] dark:hover:text-[#000080] gap-2 py-3 px-6 text-xs sm:text-sm font-semibold shadow-xs hover-lift transition-all cursor-pointer flex items-center"
                 aria-expanded={isExpanded}
               >
                 <span>{isExpanded ? "Ocultar detalhes" : "Conhecer Trajetória & Experiência"}</span>
@@ -216,7 +216,7 @@ export function About() {
                 href={OFFICE_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-pill bg-[var(--accent)] hover:opacity-90 text-[var(--bg-primary)] border border-[var(--brand-silver-shine)]/40 gap-2 py-3 px-6 text-xs sm:text-sm shadow-md hover-lift transition-all flex items-center cursor-pointer font-semibold"
+                className="btn-pill bg-[#0047AB] hover:bg-[#003580] text-white border border-[#82C8E5]/40 gap-2 py-3 px-6 text-xs sm:text-sm shadow-md hover-lift transition-all flex items-center cursor-pointer font-semibold"
               >
                 <MessageSquare className="w-4 h-4 fill-current" />
                 <span>Falar com o Dr. Arthur</span>
@@ -267,7 +267,7 @@ export function About() {
           {/* Coluna da Foto Oficial do Dr. Arthur Pacheco */}
           <div className="lg:col-span-5 order-1 lg:order-2 w-full flex justify-center lg:justify-end">
             <div ref={photoCardRef} className="w-full max-w-[360px] sm:max-w-[400px] will-change-transform">
-              <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] rounded-3xl overflow-hidden border-2 border-[var(--brand-silver-shine)]/40 shadow-2xl hover-lift group bg-[#1A1A1A]">
+              <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] rounded-3xl overflow-hidden border-2 border-[#82C8E5]/50 shadow-[0_10px_35px_rgba(0,71,171,0.25)] hover-lift group bg-[#0A1128]">
                 {/* Feixe de luz suave */}
                 <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent z-20 pointer-events-none" />
                 <Image
@@ -278,17 +278,17 @@ export function About() {
                   className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 90vw, 420px"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#060A17]/95 via-[#060A17]/35 to-transparent pointer-events-none" />
 
                 {/* Badge Inferior com Nome e Titularidade */}
                 <div className="absolute bottom-5 left-5 right-5 text-white z-10 pointer-events-none">
-                  <span className="text-[0.6875rem] uppercase tracking-widest text-[#D1D5DB] font-heading font-bold block mb-1">
+                  <span className="text-[0.6875rem] uppercase tracking-widest text-[#82C8E5] font-heading font-bold block mb-1">
                     Advogado Titular
                   </span>
                   <p className="font-heading text-xl sm:text-2xl font-bold leading-tight text-white drop-shadow-sm">
                     {LAWYER_PROFILE.name}
                   </p>
-                  <p className="text-xs text-gray-300 font-body mt-1 leading-relaxed">
+                  <p className="text-xs text-gray-200 font-body mt-1 leading-relaxed">
                     Especialista em Direito do Trabalho & Previdenciário (PUC Minas)
                   </p>
                 </div>

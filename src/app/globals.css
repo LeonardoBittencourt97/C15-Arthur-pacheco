@@ -4,43 +4,37 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --bg-primary: #F3F4F6;
+  --bg-primary: #F4F7FB;
   --bg-card: #FFFFFF;
-  --bg-secondary: #E5E7EB;
-  --text-main: #1C1C1C;
-  --text-muted: #4B5563;
-  --brand-black: #1C1C1C;
-  --brand-dark: #111827;
-  --brand-silver: #9CA3AF;
-  --brand-silver-light: #E5E7EB;
-  --brand-silver-shine: #D1D5DB;
-  --brand-graphite: #374151;
-  --brand-offwhite: #F3F4F6;
-  --accent: #1C1C1C;
-  --accent-hover: #374151;
-  --accent-light: #E5E7EB;
-  --accent-dark: #111827;
-  --border-subtle: rgba(28, 28, 28, 0.15);
+  --bg-secondary: #E8EEF5;
+  --text-main: #000080;
+  --text-muted: #6D8196;
+  --brand-cobalt: #0047AB;
+  --brand-navy: #000080;
+  --brand-sky: #82C8E5;
+  --brand-slate: #6D8196;
+  --accent: #0047AB;
+  --accent-hover: #003580;
+  --accent-light: #82C8E5;
+  --accent-dark: #000080;
+  --border-subtle: rgba(109, 129, 150, 0.22);
 }
 
 html.dark {
-  --bg-primary: #121212;
-  --bg-card: #1C1C1C;
-  --bg-secondary: #1F242D;
-  --text-main: #F3F4F6;
-  --text-muted: #9CA3AF;
-  --brand-black: #1C1C1C;
-  --brand-dark: #0B0F17;
-  --brand-silver: #D1D5DB;
-  --brand-silver-light: #374151;
-  --brand-silver-shine: #E5E7EB;
-  --brand-graphite: #D1D5DB;
-  --brand-offwhite: #F3F4F6;
-  --accent: #D1D5DB;
-  --accent-hover: #F3F4F6;
-  --accent-light: #2A313D;
-  --accent-dark: #9CA3AF;
-  --border-subtle: rgba(209, 213, 219, 0.20);
+  --bg-primary: #060A17;
+  --bg-card: #0C142A;
+  --bg-secondary: #111C3D;
+  --text-main: #F0F5FA;
+  --text-muted: #82C8E5;
+  --brand-cobalt: #0047AB;
+  --brand-navy: #000080;
+  --brand-sky: #82C8E5;
+  --brand-slate: #6D8196;
+  --accent: #82C8E5;
+  --accent-hover: #A6DBF2;
+  --accent-light: #1A2A54;
+  --accent-dark: #0047AB;
+  --border-subtle: rgba(130, 200, 229, 0.20);
 }
 
 html {
@@ -53,20 +47,20 @@ body {
   overflow-x: clip;
   background-color: var(--bg-primary);
   color: var(--text-main);
-  font-family: var(--font-body), Georgia, serif;
+  font-family: var(--font-body), 'Merriweather', Georgia, serif;
   transition: background-color 0.3s ease, color 0.3s ease;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Tipografia de Títulos e Cabeçalhos: Chonburi */
+/* Tipografia de Títulos e Cabeçalhos: Raleway */
 h1, h2, h3, h4, h5, h6, .font-heading {
-  font-family: var(--font-heading), serif;
-  letter-spacing: 0.01em;
+  font-family: var(--font-heading), 'Raleway', sans-serif;
+  letter-spacing: -0.01em;
 }
 
-/* Tipografia de Leitura Editorial: Domine */
+/* Tipografia de Leitura Editorial: Merriweather */
 .font-body {
-  font-family: var(--font-body), Georgia, serif;
+  font-family: var(--font-body), 'Merriweather', Georgia, serif;
 }
 
 /* Bordas sutis editoriais */
@@ -107,7 +101,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   justify-content: center;
   border-radius: 9999px;
   padding: 0.75rem 1.75rem;
-  font-family: var(--font-heading), sans-serif;
+  font-family: var(--font-heading), 'Raleway', sans-serif;
   font-weight: 600;
   letter-spacing: 0.02em;
   font-size: 0.9375rem;

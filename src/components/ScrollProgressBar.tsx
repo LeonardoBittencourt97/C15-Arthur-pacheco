@@ -25,7 +25,7 @@ export function ScrollProgressBar() {
       className="fixed top-0 left-0 right-0 h-[3.5px] z-[100] pointer-events-none bg-black/10 dark:bg-white/5"
     >
       <div
-        className="h-full bg-gradient-to-r from-[#1C1C1C] via-[#9CA3AF] to-[#E5E7EB] dark:from-[#9CA3AF] dark:via-[#E5E7EB] dark:to-[#FFFFFF] origin-left transition-transform duration-75 ease-out shadow-[0_0_12px_rgba(209,213,219,0.8)]"
+        className="h-full bg-gradient-to-r from-[#000080] via-[#0047AB] to-[#82C8E5] origin-left transition-transform duration-75 ease-out shadow-[0_0_12px_rgba(130,200,229,0.8)]"
         style={{ transform: `scaleX(${scrollProgress})` }}
       />
     </div>

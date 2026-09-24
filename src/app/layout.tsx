@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
-import { Chonburi, Domine } from "next/font/google";
+import { Raleway, Merriweather } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { getLegalServiceSchema } from "@/lib/schema";
 
-const chonburi = Chonburi({
+const raleway = Raleway({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["400", "500", "600", "700", "800"],
   variable: "--font-heading",
   display: "swap",
 });
 
-const domine = Domine({
+const merriweather = Merriweather({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "700"],
   variable: "--font-body",
   display: "swap",
 });
@@ -105,7 +105,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${chonburi.variable} ${domine.variable}`}
+      className={`${raleway.variable} ${merriweather.variable}`}
       suppressHydrationWarning
     >
       <head>

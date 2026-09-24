@@ -210,7 +210,7 @@ export function PracticeAreas() {
             {bottomRowAreas.map((area, idx) => (
               <div
                 key={area.id}
-                className="h-full p-6 sm:p-8 rounded-2xl bg-[var(--bg-card)] border-2 border-[var(--brand-silver-shine)]/50 shadow-2xl flex flex-col justify-between group transition-all duration-300"
+                className="h-full p-6 sm:p-8 rounded-2xl bg-[var(--bg-card)] border-2 border-[#0047AB]/40 dark:border-[#82C8E5]/40 shadow-[0_10px_30px_rgba(0,71,171,0.15)] flex flex-col justify-between group transition-all duration-300"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
@@ -271,7 +271,7 @@ export function PracticeAreas() {
               <div
                 key={area.id}
                 className={`rounded-2xl bg-[var(--bg-card)] border transition-all duration-300 overflow-hidden ${
-                  isExpanded ? "border-[var(--brand-silver-shine)] shadow-md" : "border-[var(--border-subtle)]/35 shadow-2xs"
+                  isExpanded ? "border-[#0047AB] dark:border-[#82C8E5] shadow-md" : "border-[var(--border-subtle)]/35 shadow-2xs"
                 }`}
               >
                 {/* Cabeçalho do Card Mobile */}

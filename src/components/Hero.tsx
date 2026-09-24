@@ -4,7 +4,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { OFFICE_INFO } from "@/lib/data";
-import { MessageSquare, ChevronRight, ShieldCheck, Award, MapPin } from "lucide-react";
+import { MessageSquare, ShieldCheck, ChevronRight, Award } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -15,39 +15,52 @@ if (typeof window !== "undefined") {
 
 export function Hero() {
   const heroRef = useRef<HTMLElement>(null);
-  const bgRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+  const imageDesktopRef = useRef<HTMLDivElement>(null);
+  const imageMobileRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
     () => {
-      // Parallax dinâmico no fundo que acompanha a rolagem
-      if (bgRef.current) {
-        gsap.to(bgRef.current, {
-          yPercent: 20,
-          scale: 1.06,
+      // 1. Efeito de Parallax suave nas imagens de fundo do Hero
+      if (imageDesktopRef.current) {
+        gsap.to(imageDesktopRef.current, {
+          y: 70,
           ease: "none",
           scrollTrigger: {
             trigger: heroRef.current,
             start: "top top",
             end: "bottom top",
-            scrub: 1,
+            scrub: true,
           },
         });
       }
 
-      // Elevação e fade suave do texto ao sair da primeira dobra
-      if (contentRef.current) {
-        gsap.to(contentRef.current, {
-          y: -40,
-          opacity: 0.2,
+      if (imageMobileRef.current) {
+        gsap.to(imageMobileRef.current, {
+          y: 45,
           ease: "none",
           scrollTrigger: {
             trigger: heroRef.current,
             start: "top top",
-            end: "bottom 35%",
-            scrub: 1,
+            end: "bottom top",
+            scrub: true,
           },
         });
+      }
+
+      // 2. Animação de entrada dos textos e botões
+      if (contentRef.current) {
+        gsap.fromTo(
+          contentRef.current,
+          { opacity: 0, y: 35 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.9,
+            ease: "power2.out",
+            delay: 0.1,
+          }
+        );
       }
     },
     { scope: heroRef }
@@ -57,39 +70,39 @@ export function Hero() {
     <section
       id="inicio"
       ref={heroRef}
-      className="relative min-h-[100dvh] w-full flex flex-col justify-between pt-24 pb-8 sm:pt-28 sm:pb-12 lg:pt-32 lg:pb-12 overflow-hidden editorial-border-b text-white"
+      className="relative min-h-[92dvh] sm:min-h-[95dvh] lg:min-h-[100dvh] flex flex-col justify-between pt-24 sm:pt-28 pb-10 sm:pb-14 overflow-hidden w-full"
     >
-      {/* Imagem de Fundo com Parallax e Overlays de Alta Legibilidade */}
-      <div ref={bgRef} className="absolute inset-0 w-full h-full pointer-events-none z-0 will-change-transform">
-        {/* Mobile: header_mobile.jpeg */}
-        <div className="relative w-full h-full block md:hidden">
-          <Image
-            src="/header_mobile.jpeg"
-            alt={OFFICE_INFO.name}
-            fill
-            priority
-            className="object-cover object-center"
-            sizes="100vw"
-          />
-        </div>
-
-        {/* Desktop: header_desktop.jpeg com alta fidelidade */}
-        <div className="relative w-full h-full hidden md:block">
+      {/* Imagem de Fundo Desktop */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div ref={imageDesktopRef} className="hidden md:block absolute inset-0 -top-12 -bottom-12 will-change-transform">
           <Image
             src="/header_desktop.jpeg"
-            alt={OFFICE_INFO.name}
+            alt="Arthur Pacheco Advocacia - Soluções Trabalhistas e Previdenciárias"
             fill
             priority
-            quality={95}
-            className="object-cover object-center"
+            quality={90}
+            className="object-cover object-[center_28%] brightness-[0.88] contrast-[1.05]"
             sizes="100vw"
           />
         </div>
 
-        {/* Gradientes e Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/50 md:from-black/85 md:via-black/45 md:via-55% md:to-black/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/60 md:from-black/40 md:via-transparent md:to-transparent" />
-        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#D1D5DB]/15 rounded-full blur-3xl md:hidden" />
+        {/* Imagem de Fundo Mobile */}
+        <div ref={imageMobileRef} className="block md:hidden absolute inset-0 -top-8 -bottom-8 will-change-transform">
+          <Image
+            src="/header_mobile.jpeg"
+            alt="Arthur Pacheco Advocacia - Escritório Trabalhista e Previdenciário"
+            fill
+            priority
+            quality={90}
+            className="object-cover object-[center_22%] brightness-[0.85] contrast-[1.05]"
+            sizes="100vw"
+          />
+        </div>
+
+        {/* Gradientes e Overlays no tom Cobalt Sky */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#060A17]/95 via-[#0A1128]/80 to-[#0A1128]/50 md:from-[#060A17]/90 md:via-[#0A1128]/50 md:via-55% md:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#060A17]/90 via-transparent to-[#060A17]/60 md:from-[#060A17]/45 md:via-transparent md:to-transparent" />
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#0047AB]/25 rounded-full blur-3xl md:hidden" />
       </div>
 
       <div
@@ -99,15 +112,15 @@ export function Hero() {
         {/* Topo do Hero: Badge + Título Principal */}
         <div className="pt-2 sm:pt-4 lg:pt-4 max-w-3xl animate-fade-in-down">
           {/* Badge de Autoridade */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#D1D5DB]/30 bg-black/60 backdrop-blur-md text-xs sm:text-sm font-heading tracking-wide text-[#E5E7EB] mb-5 shadow-sm">
-            <ShieldCheck className="w-4 h-4 text-[#D1D5DB]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#82C8E5]/40 bg-[#060A17]/70 backdrop-blur-md text-xs sm:text-sm font-heading tracking-wide text-[#82C8E5] mb-5 shadow-sm">
+            <ShieldCheck className="w-4 h-4 text-[#82C8E5]" />
             <span>Arthur M. Jungles Pacheco • Mais de 6 Anos de Prática</span>
           </div>
 
           {/* Headline Principal */}
           <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] leading-[1.15] tracking-tight text-white font-bold drop-shadow-[0_2px_14px_rgba(0,0,0,0.9)]">
             Soluções jurídicas{" "}
-            <span className="text-[#D1D5DB] relative">
+            <span className="text-[#82C8E5] relative font-extrabold">
               ágeis e estratégicas
             </span>{" "}
             na defesa dos seus direitos trabalhistas e previdenciários.
@@ -126,7 +139,7 @@ export function Hero() {
               href={OFFICE_INFO.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-pill bg-[#1C1C1C] hover:bg-[#374151] hover:scale-[1.02] text-white border border-[#D1D5DB]/40 gap-2.5 py-3 sm:py-3.5 px-6 sm:px-7 text-xs sm:text-sm font-semibold tracking-normal shadow-xl group transition-all text-center justify-center flex items-center cursor-pointer"
+              className="btn-pill bg-[#0047AB] hover:bg-[#003580] hover:scale-[1.02] text-white border border-[#82C8E5]/40 gap-2.5 py-3 sm:py-3.5 px-6 sm:px-7 text-xs sm:text-sm font-semibold tracking-normal shadow-[0_0_20px_rgba(0,71,171,0.4)] group transition-all text-center justify-center flex items-center cursor-pointer"
             >
               <MessageSquare className="w-4 h-4 text-white group-hover:scale-110 transition-transform" />
               <span>Falar com o Dr. Arthur</span>
@@ -134,28 +147,28 @@ export function Hero() {
 
             <Link
               href="#educativo"
-              className="btn-pill bg-white/10 backdrop-blur-md text-white border border-white/30 hover:bg-white hover:text-black hover:border-white hover:scale-[1.02] shadow-md gap-2 py-3 sm:py-3.5 px-6 text-xs sm:text-sm font-semibold tracking-normal group transition-all text-center justify-center flex items-center cursor-pointer"
+              className="btn-pill bg-white/10 backdrop-blur-md text-white border border-white/30 hover:bg-[#82C8E5] hover:text-[#000080] hover:border-[#82C8E5] hover:scale-[1.02] shadow-md gap-2 py-3 sm:py-3.5 px-6 text-xs sm:text-sm font-semibold tracking-normal group transition-all text-center justify-center flex items-center cursor-pointer"
             >
               <span className="font-semibold">Conheça seus Direitos</span>
-              <ChevronRight className="w-4 h-4 text-[#D1D5DB] group-hover:translate-x-1 group-hover:text-black transition-transform" />
+              <ChevronRight className="w-4 h-4 text-[#82C8E5] group-hover:translate-x-1 group-hover:text-[#000080] transition-transform" />
             </Link>
           </div>
 
           {/* Barra de Atributos de Prestígio */}
           <div className="hidden lg:flex items-center justify-between py-3 border-t border-white/20 mt-8 text-white/90 max-w-2xl">
             <div className="flex items-center gap-2.5">
-              <span className="bullet-indicator text-[#D1D5DB]" />
+              <span className="bullet-indicator text-[#82C8E5]" />
               <span className="font-heading uppercase text-xs tracking-widest text-white/90 font-bold">
                 Curitiba / PR • Atendimento Digital
               </span>
             </div>
             <div className="flex items-center gap-4 text-xs font-heading text-white/80">
               <span className="flex items-center gap-1.5">
-                <Award className="w-3.5 h-3.5 text-[#D1D5DB]" />
+                <Award className="w-3.5 h-3.5 text-[#82C8E5]" />
                 Pós-Graduação PUC Minas
               </span>
               <span className="flex items-center gap-1.5">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#D1D5DB]" />
+                <ShieldCheck className="w-3.5 h-3.5 text-[#82C8E5]" />
                 Mais de 6 Anos de Atuação
               </span>
             </div>

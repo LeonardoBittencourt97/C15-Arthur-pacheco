@@ -136,10 +136,10 @@ export function HowWeWork() {
           {/* Linha guia de fundo */}
           <div className="hidden lg:block absolute top-12 left-8 right-8 h-[2px] bg-[var(--border-subtle)]/25 -z-10" />
 
-          {/* Linha de progresso Metálica conectora */}
+          {/* Linha de progresso Cobalt Sky conectora */}
           <div
             ref={progressBarRef}
-            className="hidden lg:block absolute top-12 left-8 right-8 h-[2px] bg-gradient-to-r from-[var(--brand-silver)] via-[var(--brand-silver-shine)] to-[var(--brand-silver)] -z-10 will-change-transform"
+            className="hidden lg:block absolute top-12 left-8 right-8 h-[2px] bg-gradient-to-r from-[#000080] via-[#0047AB] to-[#82C8E5] -z-10 will-change-transform"
           />
 
           {/* 4 Passos Estruturados */}
@@ -183,7 +183,7 @@ export function HowWeWork() {
             href={OFFICE_INFO.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-pill bg-[var(--accent)] hover:opacity-90 text-[var(--bg-primary)] border border-[var(--brand-silver-shine)]/40 gap-2 shadow-md text-sm font-semibold inline-flex items-center cursor-pointer"
+            className="btn-pill bg-[#0047AB] hover:bg-[#003580] text-white border border-[#82C8E5]/40 gap-2 shadow-[0_0_15px_rgba(0,71,171,0.35)] text-sm font-semibold inline-flex items-center cursor-pointer"
           >
             <MessageSquare className="w-4 h-4 fill-current" />
             <span>Falar com o Dr. Arthur via WhatsApp</span>

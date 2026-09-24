@@ -139,7 +139,7 @@ export function FaqSection() {
                 onClick={() => setActiveTab(cat.id)}
                 className={`px-5 py-2.5 rounded-full font-heading text-xs uppercase tracking-wider font-semibold transition-all duration-300 cursor-pointer ${
                   isActive
-                    ? "bg-[var(--accent)] text-[var(--bg-primary)] shadow-sm scale-105"
+                    ? "bg-[#0047AB] text-white shadow-[0_0_12px_rgba(0,71,171,0.35)] scale-105"
                     : "bg-[var(--bg-secondary)]/80 text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-secondary)]"
                 }`}
               >
@@ -171,8 +171,8 @@ export function FaqSection() {
                   <div
                     className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
                       isOpen
-                        ? "bg-[var(--accent)] text-[var(--bg-primary)] rotate-180"
-                        : "bg-[var(--bg-secondary)] text-[var(--accent)] group-hover:bg-[var(--accent)]/15"
+                        ? "bg-[#0047AB] text-white rotate-180"
+                        : "bg-[var(--bg-secondary)] text-[var(--accent)] group-hover:bg-[#0047AB]/15"
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />
@@ -209,7 +209,7 @@ export function FaqSection() {
             href={OFFICE_INFO.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-pill bg-[var(--accent)] hover:opacity-90 text-[var(--bg-primary)] border border-[var(--brand-silver-shine)]/40 gap-2 shadow-md text-xs sm:text-sm font-semibold inline-flex items-center cursor-pointer"
+            className="btn-pill bg-[#0047AB] hover:bg-[#003580] text-white border border-[#82C8E5]/40 gap-2 shadow-[0_0_15px_rgba(0,71,171,0.3)] text-xs sm:text-sm font-semibold inline-flex items-center cursor-pointer"
           >
             <WhatsAppIcon className="w-4 h-4 fill-current" />
             <span>Falar no WhatsApp com o Dr. Arthur</span>

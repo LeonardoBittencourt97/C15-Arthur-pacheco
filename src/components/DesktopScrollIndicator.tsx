@@ -59,7 +59,7 @@ export function DesktopScrollIndicator() {
       aria-label="Indicador de navegação por seções"
       className="hidden lg:flex fixed right-6 top-1/2 -translate-y-1/2 z-40 flex-col items-end gap-3.5 pointer-events-none"
     >
-      <div className="relative flex flex-col items-end gap-3 py-3 px-2 rounded-full bg-black/25 dark:bg-black/40 backdrop-blur-md border border-[var(--border-subtle)]/30 shadow-lg pointer-events-auto">
+      <div className="relative flex flex-col items-end gap-3 py-3 px-2 rounded-full bg-black/30 dark:bg-black/50 backdrop-blur-md border border-[var(--border-subtle)]/30 shadow-lg pointer-events-auto">
         {/* Linha guia vertical */}
         <div className="absolute right-[19px] top-4 bottom-4 w-[1px] bg-[var(--border-subtle)]/40 -z-10" />
 
@@ -78,11 +78,11 @@ export function DesktopScrollIndicator() {
               <div
                 className={`absolute right-7 py-1 px-2.5 rounded-lg text-xs font-heading font-semibold whitespace-nowrap transition-all duration-300 pointer-events-none border ${
                   isHovered || (isActive && hoveredSection === null)
-                    ? "opacity-100 translate-x-0 bg-[#1A1A1A]/95 text-white border-[var(--brand-silver-shine)]/60 shadow-md scale-100"
+                    ? "opacity-100 translate-x-0 bg-[#060A17]/95 text-white border-[#82C8E5]/60 shadow-md scale-100"
                     : "opacity-0 translate-x-2 border-transparent scale-95"
                 }`}
               >
-                <span className="text-[#D1D5DB] mr-1.5 font-bold">{sec.num}</span>
+                <span className="text-[#82C8E5] mr-1.5 font-bold">{sec.num}</span>
                 <span>{sec.name}</span>
               </div>
 
@@ -96,10 +96,10 @@ export function DesktopScrollIndicator() {
                 <span
                   className={`rounded-full transition-all duration-300 ${
                     isActive
-                      ? "w-3 h-3 bg-[var(--accent)] ring-4 ring-[var(--accent)]/30 shadow-[0_0_10px_rgba(209,213,219,0.8)] scale-110"
+                      ? "w-3 h-3 bg-[#0047AB] ring-4 ring-[#82C8E5]/50 shadow-[0_0_12px_rgba(0,71,171,0.9)] scale-110"
                       : isHovered
-                      ? "w-2.5 h-2.5 bg-white/80 dark:bg-white/90 scale-105"
-                      : "w-1.5 h-1.5 bg-[var(--text-muted)]/50 group-hover:bg-[var(--accent)]/80"
+                      ? "w-2.5 h-2.5 bg-white/90 scale-105"
+                      : "w-1.5 h-1.5 bg-[var(--text-muted)]/50 group-hover:bg-[#0047AB]"
                   }`}
                 />
               </a>
