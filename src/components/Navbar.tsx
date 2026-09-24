@@ -82,7 +82,7 @@ export function Navbar() {
   return (
     <>
       {/* 1. LOGO MOBILE FIXA SEPARADA - DESCONECTADA DO MENU E ELEVADA */}
-      <div className="lg:hidden fixed -top-1 sm:-top-1.5 left-2 sm:left-3 z-50 pointer-events-none">
+      <div className="lg:hidden fixed -top-3.5 sm:-top-4 left-2 sm:left-3 z-50 pointer-events-none">
         <Link href="#inicio" className="flex items-center group focus:outline-none pointer-events-auto">
           <div className="relative h-20 sm:h-22 w-52 sm:w-60 transition-transform duration-300 group-hover:scale-105">
             <Image
