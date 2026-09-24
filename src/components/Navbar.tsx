@@ -81,8 +81,8 @@ export function Navbar() {
 
   return (
     <>
-      {/* 1. LOGO MOBILE FIXA SEPARADA - ALINHADA AO TOPO COM MÁXIMA NITIDEZ (DOBRADA) */}
-      <div className="lg:hidden fixed top-1 sm:top-1.5 left-2 sm:left-3 z-50 pointer-events-none">
+      {/* 1. LOGO MOBILE FIXA SEPARADA - DESCONECTADA DO MENU E ELEVADA */}
+      <div className="lg:hidden fixed -top-1 sm:-top-1.5 left-2 sm:left-3 z-50 pointer-events-none">
         <Link href="#inicio" className="flex items-center group focus:outline-none pointer-events-auto">
           <div className="relative h-20 sm:h-22 w-52 sm:w-60 transition-transform duration-300 group-hover:scale-105">
             <Image
@@ -99,7 +99,7 @@ export function Navbar() {
 
       {/* 2. BARRA DE NAVEGAÇÃO PRINCIPAL */}
       <header
-        className={`fixed top-0 left-0 right-0 w-full max-w-full z-40 transition-all duration-300 overflow-x-clip ${
+        className={`fixed top-0 left-0 right-0 w-full max-w-full z-40 transition-all duration-300 ${
           isScrolled
             ? "bg-[var(--bg-primary)]/95 backdrop-blur-md shadow-sm border-b border-[var(--border-subtle)]/30 py-2 sm:py-2.5"
             : "bg-transparent py-3 sm:py-4"
@@ -108,21 +108,21 @@ export function Navbar() {
         <div className="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8">
           <div className="relative min-h-[2.5rem] sm:min-h-[3rem] flex items-center justify-between gap-2 sm:gap-4">
             
-            {/* Espaçador Mobile para proteger a área da logo sem afetar os botões */}
-            <div className="lg:hidden w-48 sm:w-56 flex-shrink pointer-events-none" />
+            {/* Espaçador Mobile para proteger a área da logo sem afetar a altura dos botões */}
+            <div className="lg:hidden w-44 sm:w-52 h-6 flex-shrink-0 pointer-events-none" />
 
-            {/* Logo Desktop: Desacoplada da altura da barra do menu (Tamanho Dobrado) */}
-            <div className="hidden lg:flex items-center justify-start relative flex-shrink-0 w-52 xl:w-60 h-16 xl:h-20 pointer-events-none">
+            {/* Logo Desktop: Totalmente Desacoplada da altura da barra do menu (+20% no tamanho) */}
+            <div className="hidden lg:flex items-center justify-start relative flex-shrink-0 w-60 xl:w-72 h-10 pointer-events-none">
               <div className="absolute left-0 top-1/2 -translate-y-1/2 pointer-events-auto">
                 <Link href="#inicio" className="flex items-center group focus:outline-none">
-                  <div className="relative h-16 xl:h-20 w-48 xl:w-56 transition-transform duration-300 group-hover:scale-105">
+                  <div className="relative h-22 xl:h-26 w-60 xl:w-72 transition-transform duration-300 group-hover:scale-105">
                     <Image
                       src={currentLogo}
                       alt={OFFICE_INFO.name}
                       fill
                       priority
                       className="object-contain object-left drop-shadow-sm"
-                      sizes="240px"
+                      sizes="(min-width: 1280px) 360px, 300px"
                     />
                   </div>
                 </Link>
