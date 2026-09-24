@@ -146,8 +146,8 @@ export function EducationalSection() {
                   onClick={() => setSelectedId(topic.id)}
                   className={`w-full text-left p-5 rounded-2xl border transition-all duration-300 cursor-pointer ${
                     isSelected
-                      ? "bg-[var(--bg-card)] border-[#0047AB] dark:border-[#82C8E5] shadow-md -translate-y-0.5"
-                      : "bg-[var(--bg-card)]/60 border-[var(--border-subtle)]/30 hover:bg-[var(--bg-card)] hover:border-[#0047AB]/50 dark:hover:border-[#82C8E5]/50"
+                      ? "bg-[var(--bg-card)] border-[#0B192C] dark:border-[#D1D5DB] shadow-md -translate-y-0.5"
+                      : "bg-[var(--bg-card)]/60 border-[var(--border-subtle)]/30 hover:bg-[var(--bg-card)] hover:border-[#0B192C]/40 dark:hover:border-[#D1D5DB]/40"
                   }`}
                 >
                   <div className="flex items-center justify-between gap-3 mb-2">
@@ -230,9 +230,9 @@ export function EducationalSection() {
                   href={getWhatsAppMessageUrl(activeTopic.title)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-pill bg-[#0047AB] hover:bg-[#003580] text-white border border-[#82C8E5]/40 gap-2 py-3 px-6 text-xs sm:text-sm font-semibold shadow-[0_0_15px_rgba(0,71,171,0.3)] hover-lift transition-all cursor-pointer flex items-center flex-shrink-0"
+                  className="btn-pill bg-[#0B192C] hover:bg-[#132238] text-white border-2 border-[#D1D5DB]/60 gap-2 py-3 px-6 text-xs sm:text-sm font-semibold shadow-[0_4px_20px_rgba(11,25,44,0.35)] hover-lift transition-all cursor-pointer flex items-center flex-shrink-0"
                 >
-                  <WhatsAppIcon className="w-4 h-4 fill-current" />
+                  <WhatsAppIcon className="w-4 h-4 text-[#D1D5DB]" />
                   <span>Tirar Dúvida no WhatsApp</span>
                 </a>
               </div>
@@ -251,7 +251,7 @@ export function EducationalSection() {
               <div
                 key={topic.id}
                 className={`rounded-2xl border transition-all duration-300 bg-[var(--bg-card)] overflow-hidden ${
-                  isExpanded ? "border-[#0047AB] dark:border-[#82C8E5] shadow-md" : "border-[var(--border-subtle)]/35 shadow-2xs"
+                  isExpanded ? "border-[#0B192C] dark:border-[#D1D5DB] shadow-md" : "border-[var(--border-subtle)]/35 shadow-2xs"
                 }`}
               >
                 <button
@@ -295,9 +295,9 @@ export function EducationalSection() {
                       href={getWhatsAppMessageUrl(topic.title)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn-pill bg-[#0047AB] hover:bg-[#003580] text-white border border-[#82C8E5]/40 w-full py-2.5 text-xs font-semibold shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
+                      className="btn-pill bg-[#0B192C] hover:bg-[#132238] text-white border-2 border-[#D1D5DB]/60 w-full py-2.5 text-xs font-semibold shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
                     >
-                      <WhatsAppIcon className="w-3.5 h-3.5 fill-current" />
+                      <WhatsAppIcon className="w-3.5 h-3.5 text-[#D1D5DB]" />
                       <span>Tirar Dúvida sobre este Tema</span>
                     </a>
                   </div>

@@ -92,10 +92,10 @@ export function InstitutionalPillars() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between pb-4 border-b border-[var(--border-subtle)]/25 mb-8 text-[var(--text-muted)]">
-          {/* Linha Prateada desenhada pelo scroll */}
+          {/* Linha Prateada / Azul Escuro desenhada pelo scroll */}
           <div
             ref={lineRef}
-            className="absolute -bottom-[1px] left-0 right-0 h-[2px] bg-gradient-to-r from-[#000080] via-[#0047AB] to-[#82C8E5] will-change-transform"
+            className="absolute -bottom-[1px] left-0 right-0 h-[2px] bg-gradient-to-r from-[#0B192C] via-[#D1D5DB] to-[#121212] dark:from-[#0B192C] dark:via-[#E5E7EB] dark:to-[#64748B] will-change-transform"
           />
           <div className="flex items-center gap-2.5">
             <Award className="w-4 h-4 text-[var(--accent)]" />

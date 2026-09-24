@@ -223,9 +223,9 @@ export function ContactSection() {
                 href={OFFICE_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full btn-pill bg-[#0047AB] hover:bg-[#003580] text-white py-3.5 gap-2 shadow-[0_0_20px_rgba(0,71,171,0.35)] text-sm sm:text-base cursor-pointer hover-lift transition-all flex items-center justify-center font-semibold"
+                className="w-full btn-pill bg-[#0B192C] hover:bg-[#132238] text-white border-2 border-[#D1D5DB]/60 py-3.5 gap-2 shadow-[0_4px_20px_rgba(11,25,44,0.35)] text-sm sm:text-base cursor-pointer hover-lift transition-all flex items-center justify-center font-semibold"
               >
-                <MessageSquare className="w-4 h-4 fill-current" />
+                <MessageSquare className="w-4 h-4 text-[#D1D5DB]" />
                 <span>Iniciar Atendimento no WhatsApp</span>
               </a>
             </div>
@@ -233,7 +233,7 @@ export function ContactSection() {
 
           {/* Coluna 2: Hub Visual de Consultoria 100% Online */}
           <div ref={digitalHubRef} className="lg:col-span-7 flex flex-col justify-between will-change-transform">
-            <div className="h-full p-6 sm:p-8 rounded-3xl bg-[var(--bg-card)] border-2 border-[#0047AB]/35 dark:border-[#82C8E5]/35 shadow-xl flex flex-col justify-between">
+            <div className="h-full p-6 sm:p-8 rounded-3xl bg-[var(--bg-card)] border-2 border-[#0B192C]/30 dark:border-[#D1D5DB]/40 shadow-xl flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between pb-6 border-b border-[var(--border-subtle)]/25 mb-6">
                   <div>
@@ -327,7 +327,7 @@ export function ContactSection() {
                   href={`https://wa.me/${OFFICE_INFO.whatsappNumber}?text=Ol%C3%A1%2C%20Dr.%20Arthur.%20Gostaria%20de%20enviar%20documentos%20para%20uma%20an%C3%A1lise%20trabalhista%2Fprevidenci%C3%A1ria.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-pill w-full bg-[var(--bg-secondary)] hover:bg-[#0047AB] hover:text-white text-[var(--text-main)] border border-[var(--border-subtle)] py-3 px-4 text-xs sm:text-sm font-semibold gap-2 shadow-xs inline-flex items-center justify-center transition-all cursor-pointer"
+                  className="btn-pill w-full bg-[var(--bg-secondary)] hover:bg-[#0B192C] hover:text-white text-[var(--text-main)] border border-[var(--border-subtle)] py-3 px-4 text-xs sm:text-sm font-semibold gap-2 shadow-xs inline-flex items-center justify-center transition-all cursor-pointer"
                 >
                   <MessageSquare className="w-4 h-4" />
                   <span>Enviar Documentos para Análise via WhatsApp</span>

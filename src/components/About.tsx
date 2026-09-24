@@ -201,7 +201,7 @@ export function About() {
               <button
                 type="button"
                 onClick={handleToggleExpand}
-                className="btn-pill bg-white text-[var(--brand-navy)] border-2 border-[var(--brand-cobalt)]/40 hover:bg-[var(--brand-cobalt)] hover:text-white dark:bg-[#0C142A] dark:text-[#82C8E5] dark:border-[#82C8E5]/50 dark:hover:bg-[#82C8E5] dark:hover:text-[#000080] gap-2 py-3 px-6 text-xs sm:text-sm font-semibold shadow-xs hover-lift transition-all cursor-pointer flex items-center"
+                className="btn-pill bg-white text-[#0B192C] border-2 border-[#D1D5DB] hover:bg-[#0B192C] hover:text-white dark:bg-[#0D1726] dark:text-[#D1D5DB] dark:border-[#D1D5DB]/40 dark:hover:bg-[#D1D5DB] dark:hover:text-[#0B192C] gap-2 py-3 px-6 text-xs sm:text-sm font-semibold shadow-xs hover-lift transition-all cursor-pointer flex items-center"
                 aria-expanded={isExpanded}
               >
                 <span>{isExpanded ? "Ocultar detalhes" : "Conhecer Trajetória & Experiência"}</span>
@@ -216,9 +216,9 @@ export function About() {
                 href={OFFICE_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-pill bg-[#0047AB] hover:bg-[#003580] text-white border border-[#82C8E5]/40 gap-2 py-3 px-6 text-xs sm:text-sm shadow-md hover-lift transition-all flex items-center cursor-pointer font-semibold"
+                className="btn-pill bg-[#0B192C] hover:bg-[#132238] text-white border-2 border-[#D1D5DB]/60 gap-2 py-3 px-6 text-xs sm:text-sm shadow-md hover-lift transition-all flex items-center cursor-pointer font-semibold"
               >
-                <MessageSquare className="w-4 h-4 fill-current" />
+                <MessageSquare className="w-4 h-4 text-[#D1D5DB]" />
                 <span>Falar com o Dr. Arthur</span>
               </a>
             </div>
@@ -267,7 +267,7 @@ export function About() {
           {/* Coluna da Foto Oficial do Dr. Arthur Pacheco */}
           <div className="lg:col-span-5 order-1 lg:order-2 w-full flex justify-center lg:justify-end">
             <div ref={photoCardRef} className="w-full max-w-[360px] sm:max-w-[400px] will-change-transform">
-              <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] rounded-3xl overflow-hidden border-2 border-[#82C8E5]/50 shadow-[0_10px_35px_rgba(0,71,171,0.25)] hover-lift group bg-[#0A1128]">
+              <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] rounded-3xl overflow-hidden border-2 border-[#D1D5DB]/60 dark:border-[#D1D5DB]/40 shadow-[0_12px_35px_rgba(11,25,44,0.35)] hover-lift group bg-[#080E18]">
                 {/* Feixe de luz suave */}
                 <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent z-20 pointer-events-none" />
                 <Image
@@ -278,11 +278,11 @@ export function About() {
                   className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 90vw, 420px"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#060A17]/95 via-[#060A17]/35 to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#080E18]/95 via-[#0B192C]/40 to-transparent pointer-events-none" />
 
                 {/* Badge Inferior com Nome e Titularidade */}
                 <div className="absolute bottom-5 left-5 right-5 text-white z-10 pointer-events-none">
-                  <span className="text-[0.6875rem] uppercase tracking-widest text-[#82C8E5] font-heading font-bold block mb-1">
+                  <span className="text-[0.6875rem] uppercase tracking-widest text-[#D1D5DB] font-heading font-bold block mb-1">
                     Advogado Titular
                   </span>
                   <p className="font-heading text-xl sm:text-2xl font-bold leading-tight text-white drop-shadow-sm">

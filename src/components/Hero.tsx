@@ -99,10 +99,10 @@ export function Hero() {
           />
         </div>
 
-        {/* Gradientes e Overlays no tom Cobalt Sky */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#060A17]/95 via-[#0A1128]/80 to-[#0A1128]/50 md:from-[#060A17]/90 md:via-[#0A1128]/50 md:via-55% md:to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#060A17]/90 via-transparent to-[#060A17]/60 md:from-[#060A17]/45 md:via-transparent md:to-transparent" />
-        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#0047AB]/25 rounded-full blur-3xl md:hidden" />
+        {/* Gradientes e Overlays mesclando Azul Bem Escuro, Preto e Prata */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#080E18]/95 via-[#0B192C]/85 to-[#121212]/55 md:from-[#080E18]/92 md:via-[#0B192C]/65 md:via-55% md:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#080E18]/95 via-transparent to-[#121212]/60 md:from-[#080E18]/60 md:via-transparent md:to-transparent" />
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#0B192C]/40 rounded-full blur-3xl md:hidden" />
       </div>
 
       <div
@@ -111,16 +111,16 @@ export function Hero() {
       >
         {/* Topo do Hero: Badge + Título Principal */}
         <div className="pt-2 sm:pt-4 lg:pt-4 max-w-3xl animate-fade-in-down">
-          {/* Badge de Autoridade */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#82C8E5]/40 bg-[#060A17]/70 backdrop-blur-md text-xs sm:text-sm font-heading tracking-wide text-[#82C8E5] mb-5 shadow-sm">
-            <ShieldCheck className="w-4 h-4 text-[#82C8E5]" />
+          {/* Badge de Autoridade Prateado */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#D1D5DB]/40 bg-[#0B192C]/75 backdrop-blur-md text-xs sm:text-sm font-heading tracking-wide text-[#E5E7EB] mb-5 shadow-sm">
+            <ShieldCheck className="w-4 h-4 text-[#D1D5DB]" />
             <span>Arthur M. Jungles Pacheco • Mais de 6 Anos de Prática</span>
           </div>
 
           {/* Headline Principal */}
           <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] leading-[1.15] tracking-tight text-white font-bold drop-shadow-[0_2px_14px_rgba(0,0,0,0.9)]">
             Soluções jurídicas{" "}
-            <span className="text-[#82C8E5] relative font-extrabold">
+            <span className="text-[#D1D5DB] relative font-extrabold underline decoration-[#64748B]/50 underline-offset-4">
               ágeis e estratégicas
             </span>{" "}
             na defesa dos seus direitos trabalhistas e previdenciários.
@@ -133,42 +133,42 @@ export function Hero() {
             Tecnologia jurídica, cálculos de alta precisão e atendimento 100% humanizado e transparente direto com o titular, para Curitiba/PR e trabalhadores de todo o Brasil.
           </p>
 
-          {/* CTAs com Hover e Microinterações */}
+          {/* CTAs mesclando Azul bem escuro, Preto e Prateado */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1">
             <a
               href={OFFICE_INFO.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-pill bg-[#0047AB] hover:bg-[#003580] hover:scale-[1.02] text-white border border-[#82C8E5]/40 gap-2.5 py-3 sm:py-3.5 px-6 sm:px-7 text-xs sm:text-sm font-semibold tracking-normal shadow-[0_0_20px_rgba(0,71,171,0.4)] group transition-all text-center justify-center flex items-center cursor-pointer"
+              className="btn-pill bg-[#0B192C] hover:bg-[#132238] hover:scale-[1.02] text-white border-2 border-[#D1D5DB]/60 gap-2.5 py-3 sm:py-3.5 px-6 sm:px-7 text-xs sm:text-sm font-semibold tracking-normal shadow-[0_6px_24px_rgba(11,25,44,0.7)] group transition-all text-center justify-center flex items-center cursor-pointer"
             >
-              <MessageSquare className="w-4 h-4 text-white group-hover:scale-110 transition-transform" />
+              <MessageSquare className="w-4 h-4 text-[#D1D5DB] group-hover:scale-110 transition-transform" />
               <span>Falar com o Dr. Arthur</span>
             </a>
 
             <Link
               href="#educativo"
-              className="btn-pill bg-white/10 backdrop-blur-md text-white border border-white/30 hover:bg-[#82C8E5] hover:text-[#000080] hover:border-[#82C8E5] hover:scale-[1.02] shadow-md gap-2 py-3 sm:py-3.5 px-6 text-xs sm:text-sm font-semibold tracking-normal group transition-all text-center justify-center flex items-center cursor-pointer"
+              className="btn-pill bg-[#121212]/80 backdrop-blur-md text-[#E5E7EB] border border-[#D1D5DB]/40 hover:bg-[#D1D5DB] hover:text-[#0B192C] hover:border-[#E5E7EB] hover:scale-[1.02] shadow-md gap-2 py-3 sm:py-3.5 px-6 text-xs sm:text-sm font-semibold tracking-normal group transition-all text-center justify-center flex items-center cursor-pointer"
             >
               <span className="font-semibold">Conheça seus Direitos</span>
-              <ChevronRight className="w-4 h-4 text-[#82C8E5] group-hover:translate-x-1 group-hover:text-[#000080] transition-transform" />
+              <ChevronRight className="w-4 h-4 text-[#D1D5DB] group-hover:translate-x-1 group-hover:text-[#0B192C] transition-transform" />
             </Link>
           </div>
 
           {/* Barra de Atributos de Prestígio */}
           <div className="hidden lg:flex items-center justify-between py-3 border-t border-white/20 mt-8 text-white/90 max-w-2xl">
             <div className="flex items-center gap-2.5">
-              <span className="bullet-indicator text-[#82C8E5]" />
+              <span className="bullet-indicator text-[#D1D5DB]" />
               <span className="font-heading uppercase text-xs tracking-widest text-white/90 font-bold">
                 Curitiba / PR • Atendimento Digital
               </span>
             </div>
             <div className="flex items-center gap-4 text-xs font-heading text-white/80">
               <span className="flex items-center gap-1.5">
-                <Award className="w-3.5 h-3.5 text-[#82C8E5]" />
+                <Award className="w-3.5 h-3.5 text-[#D1D5DB]" />
                 Pós-Graduação PUC Minas
               </span>
               <span className="flex items-center gap-1.5">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#82C8E5]" />
+                <ShieldCheck className="w-3.5 h-3.5 text-[#D1D5DB]" />
                 Mais de 6 Anos de Atuação
               </span>
             </div>

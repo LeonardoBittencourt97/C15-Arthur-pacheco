@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useTheme } from "@/context/ThemeContext";
 import { Sun, Moon } from "lucide-react";
@@ -16,7 +16,7 @@ export function ThemeToggle() {
       {theme === "dark" ? (
         <Sun className="w-4 h-4 text-amber-300 transition-transform duration-300 rotate-0 hover:rotate-45" />
       ) : (
-        <Moon className="w-4 h-4 text-[#A6766A] transition-transform duration-300 rotate-0 hover:-rotate-12" />
+        <Moon className="w-4 h-4 text-[#0B192C] transition-transform duration-300 rotate-0 hover:-rotate-12" />
       )}
     </button>
   );

@@ -136,10 +136,10 @@ export function HowWeWork() {
           {/* Linha guia de fundo */}
           <div className="hidden lg:block absolute top-12 left-8 right-8 h-[2px] bg-[var(--border-subtle)]/25 -z-10" />
 
-          {/* Linha de progresso Cobalt Sky conectora */}
+          {/* Linha de progresso conectora Prateado / Azul Escuro */}
           <div
             ref={progressBarRef}
-            className="hidden lg:block absolute top-12 left-8 right-8 h-[2px] bg-gradient-to-r from-[#000080] via-[#0047AB] to-[#82C8E5] -z-10 will-change-transform"
+            className="hidden lg:block absolute top-12 left-8 right-8 h-[2px] bg-gradient-to-r from-[#0B192C] via-[#D1D5DB] to-[#121212] dark:from-[#0B192C] dark:via-[#E5E7EB] dark:to-[#64748B] -z-10 will-change-transform"
           />
 
           {/* 4 Passos Estruturados */}
@@ -147,12 +147,12 @@ export function HowWeWork() {
             {WORK_STEPS.map((step, idx) => (
               <div
                 key={idx}
-                className="step-card-item h-full p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/35 shadow-xs flex flex-col justify-between relative group hover:border-[var(--brand-silver-shine)] hover:shadow-md hover-lift transition-all duration-300 will-change-transform"
+                className="step-card-item h-full p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/35 shadow-xs flex flex-col justify-between relative group hover:border-[#D1D5DB] hover:shadow-md hover-lift transition-all duration-300 will-change-transform"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-11 h-11 rounded-xl bg-[var(--bg-secondary)] flex items-center justify-center border border-[var(--border-subtle)] group-hover:bg-[var(--accent)] group-hover:text-[var(--bg-primary)] transition-all duration-300 shadow-2xs">
-                      <span className="font-heading text-xl font-bold text-[var(--accent)] group-hover:text-[var(--bg-primary)] transition-colors">
+                    <div className="w-11 h-11 rounded-xl bg-[var(--bg-secondary)] flex items-center justify-center border border-[var(--border-subtle)] group-hover:bg-[#0B192C] group-hover:text-white dark:group-hover:bg-[#D1D5DB] dark:group-hover:text-[#0B192C] transition-all duration-300 shadow-2xs">
+                      <span className="font-heading text-xl font-bold text-[var(--accent)] group-hover:text-white dark:group-hover:text-[#0B192C] transition-colors">
                         {step.number}
                       </span>
                     </div>
@@ -183,9 +183,9 @@ export function HowWeWork() {
             href={OFFICE_INFO.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-pill bg-[#0047AB] hover:bg-[#003580] text-white border border-[#82C8E5]/40 gap-2 shadow-[0_0_15px_rgba(0,71,171,0.35)] text-sm font-semibold inline-flex items-center cursor-pointer"
+            className="btn-pill bg-[#0B192C] hover:bg-[#132238] text-white border-2 border-[#D1D5DB]/60 gap-2 shadow-[0_4px_20px_rgba(11,25,44,0.4)] text-sm font-semibold inline-flex items-center cursor-pointer"
           >
-            <MessageSquare className="w-4 h-4 fill-current" />
+            <MessageSquare className="w-4 h-4 text-[#D1D5DB]" />
             <span>Falar com o Dr. Arthur via WhatsApp</span>
           </a>
         </div>

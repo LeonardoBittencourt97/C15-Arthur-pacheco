@@ -12,7 +12,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="w-full bg-[#060A17] text-white border-t border-[#0047AB]/30 pt-16 pb-8">
+    <footer className="w-full bg-[#080E18] text-white border-t border-[#D1D5DB]/20 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Topo do Footer */}
@@ -34,54 +34,54 @@ export function Footer() {
               Atuação especializada e personalizada em Direito do Trabalho e Direito Previdenciário. Consultoria 100% digital, com cálculos precisos e suporte humanizado para clientes em todo o Brasil.
             </p>
 
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#0047AB]/40 bg-[#0C142A] text-xs font-heading text-[#82C8E5]">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#82C8E5]" />
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#D1D5DB]/30 bg-[#0B192C] text-xs font-heading text-[#E5E7EB]">
+              <ShieldCheck className="w-3.5 h-3.5 text-[#D1D5DB]" />
               <span>{OFFICE_INFO.lawyer} • +6 Anos de Prática Jurídica</span>
             </div>
           </div>
 
           {/* Coluna 2: Navegação Rápida (3 colunas) */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="font-heading text-xs uppercase tracking-widest text-[#82C8E5] font-bold">
+            <h4 className="font-heading text-xs uppercase tracking-widest text-[#D1D5DB] font-bold">
               Navegação
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm font-heading text-gray-300">
               <li>
-                <Link href="#inicio" className="hover:text-[#82C8E5] transition-colors">Início</Link>
+                <Link href="#inicio" className="hover:text-[#D1D5DB] transition-colors">Início</Link>
               </li>
               <li>
-                <Link href="#sobre" className="hover:text-[#82C8E5] transition-colors">O Advogado</Link>
+                <Link href="#sobre" className="hover:text-[#D1D5DB] transition-colors">O Advogado</Link>
               </li>
               <li>
-                <Link href="#pilares" className="hover:text-[#82C8E5] transition-colors">Pilares Institucionais</Link>
+                <Link href="#pilares" className="hover:text-[#D1D5DB] transition-colors">Pilares Institucionais</Link>
               </li>
               <li>
-                <Link href="#atuacao" className="hover:text-[#82C8E5] transition-colors">Áreas de Atuação</Link>
+                <Link href="#atuacao" className="hover:text-[#D1D5DB] transition-colors">Áreas de Atuação</Link>
               </li>
               <li>
-                <Link href="#como-atuamos" className="hover:text-[#82C8E5] transition-colors">Metodologia Digital</Link>
+                <Link href="#como-atuamos" className="hover:text-[#D1D5DB] transition-colors">Metodologia Digital</Link>
               </li>
               <li>
-                <Link href="#avaliacoes" className="hover:text-[#82C8E5] transition-colors">Avaliações no Google</Link>
+                <Link href="#avaliacoes" className="hover:text-[#D1D5DB] transition-colors">Avaliações no Google</Link>
               </li>
               <li>
-                <Link href="#educativo" className="hover:text-[#82C8E5] transition-colors">Conteúdo Informativo</Link>
+                <Link href="#educativo" className="hover:text-[#D1D5DB] transition-colors">Conteúdo Informativo</Link>
               </li>
               <li>
-                <Link href="#faq" className="hover:text-[#82C8E5] transition-colors">Dúvidas Frequentes</Link>
+                <Link href="#faq" className="hover:text-[#D1D5DB] transition-colors">Dúvidas Frequentes</Link>
               </li>
               <li>
-                <Link href="#contato" className="hover:text-[#82C8E5] transition-colors">Contato Online</Link>
+                <Link href="#contato" className="hover:text-[#D1D5DB] transition-colors">Contato Online</Link>
               </li>
               <li>
-                <Link href="/links" className="text-[#82C8E5] hover:underline font-semibold">Central de Links (/links)</Link>
+                <Link href="/links" className="text-[#D1D5DB] hover:text-white hover:underline font-semibold">Central de Links (/links)</Link>
               </li>
             </ul>
           </div>
 
           {/* Coluna 3: Contatos e Redes (4 colunas) */}
           <div className="lg:col-span-4 space-y-3">
-            <h4 className="font-heading text-xs uppercase tracking-widest text-[#82C8E5] font-bold">
+            <h4 className="font-heading text-xs uppercase tracking-widest text-[#D1D5DB] font-bold">
               Canais Oficiais
             </h4>
             <div className="space-y-1.5 text-xs sm:text-sm font-body text-gray-300">
@@ -98,7 +98,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram do Dr. Arthur Pacheco"
-                className="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#0047AB] flex items-center justify-center text-white transition-colors cursor-pointer"
+                className="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#0B192C] hover:border hover:border-[#D1D5DB]/40 flex items-center justify-center text-white transition-colors cursor-pointer"
               >
                 <InstagramIcon className="w-4 h-4" />
               </a>
@@ -107,7 +107,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn do Dr. Arthur Pacheco"
-                className="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#0047AB] flex items-center justify-center text-white transition-colors cursor-pointer"
+                className="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#0B192C] hover:border hover:border-[#D1D5DB]/40 flex items-center justify-center text-white transition-colors cursor-pointer"
               >
                 <LinkedinIcon className="w-4 h-4" />
               </a>
@@ -139,7 +139,7 @@ export function Footer() {
           <button
             type="button"
             onClick={scrollToTop}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/20 hover:border-[#82C8E5] text-gray-300 hover:text-white transition-colors flex-shrink-0 cursor-pointer text-xs font-heading"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/20 hover:border-[#D1D5DB] text-gray-300 hover:text-white transition-colors flex-shrink-0 cursor-pointer text-xs font-heading"
           >
             <span>Voltar ao topo</span>
             <ArrowUp className="w-3.5 h-3.5" />
