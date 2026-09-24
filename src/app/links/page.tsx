@@ -6,8 +6,6 @@ import { OFFICE_INFO } from "@/lib/data";
 import {
   MessageSquare,
   Globe,
-  MapPin,
-  Clock,
   ArrowUpRight,
   ShieldCheck,
   Briefcase,
@@ -76,10 +74,10 @@ export default function LinksPage() {
 
   return (
     <main className="min-h-[100dvh] lg:h-screen lg:max-h-screen lg:overflow-hidden w-screen max-w-full bg-[#FFFFFF] text-[#0B192C]">
-      {/* ===================== VERSÃO DESKTOP (Split Screen 50/50 - Sem Scroll) ===================== */}
+      {/* ===================== VERSÃO DESKTOP (Split Screen 50/50 - Sem Scroll - Estilo C08-Sloane) ===================== */}
       <div className="hidden lg:grid lg:grid-cols-2 h-full w-full overflow-hidden">
         
-        {/* LADO ESQUERDO: Fundo Escuro com Logo e Identidade Visual Azul Escuro / Prata */}
+        {/* LADO ESQUERDO: Fundo Escuro com Logo DOBRADA e Identidade Visual */}
         <div className="relative bg-[#080E18] text-white flex flex-col justify-between p-8 xl:p-12 h-full overflow-hidden border-r border-[#D1D5DB]/20">
           <div className="absolute inset-0 pointer-events-none opacity-20">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -103,117 +101,150 @@ export default function LinksPage() {
             </span>
           </div>
 
-          <div className="relative z-10 my-auto py-4 flex flex-col items-center text-center w-full">
-            <div className="relative w-full max-w-[340px] h-36 xl:h-40 mb-4">
+          {/* Logo Dobrada no Lado Esquerdo */}
+          <div className="relative z-10 my-auto py-2 flex flex-col items-center text-center w-full">
+            <div className="relative w-full max-w-[560px] xl:max-w-[650px] h-60 xl:h-72 mb-4">
               <Image
                 src="/logo_sem_fundo_usarnomodoescuro.png"
                 alt={OFFICE_INFO.name}
                 fill
                 priority
-                className="object-contain drop-shadow-lg"
-                sizes="(min-width: 1024px) 340px, 260px"
+                className="object-contain object-center drop-shadow-md"
+                sizes="(min-width: 1280px) 650px, 560px"
               />
             </div>
 
-            <p className="text-sm xl:text-base text-gray-300 font-body max-w-md mx-auto leading-relaxed mt-2">
-              {OFFICE_INFO.tagline}
-            </p>
+            <div className="h-0.5 w-16 bg-[#D1D5DB]/40 mb-4" />
 
-            <div className="flex flex-wrap justify-center gap-2 mt-6 max-w-lg">
-              {specialties.map((spec, i) => (
-                <span
-                  key={i}
-                  className="text-xs px-3 py-1 rounded-full bg-[#0B192C] border border-[#D1D5DB]/30 text-[#D1D5DB] font-body"
-                >
-                  {spec}
-                </span>
-              ))}
-            </div>
+            <h1 className="font-heading text-xl xl:text-2xl font-semibold max-w-md leading-snug text-white">
+              {OFFICE_INFO.tagline}
+            </h1>
+
+            <p className="font-body text-xs xl:text-sm text-gray-300 max-w-sm mt-3 leading-relaxed">
+              Atuação especializada e estratégica nas áreas Trabalhista e Previdenciária, com cálculos de liquidação de alta precisão.
+            </p>
           </div>
 
-          <div className="relative z-10 flex items-center justify-between text-xs text-gray-400 font-body pt-4 border-t border-white/10">
+          <div className="relative z-10 flex items-center justify-between text-xs text-gray-400 font-body pt-3 border-t border-white/10">
             <p>{OFFICE_INFO.addressShort}</p>
             <p className="text-[0.6875rem] text-[#94A3B8]">Provimento 205/2021 CFOAB</p>
           </div>
         </div>
 
-        {/* LADO DIREITO: Links Rápidos */}
+        {/* LADO DIREITO: Fundo Claro com Logo + Canais de Atendimento (Réplica C08-Sloane) */}
         <div className="bg-[#FFFFFF] flex flex-col justify-between p-6 xl:p-8 h-full overflow-y-auto">
-          <div>
-            <div className="flex items-center justify-between pb-4 border-b border-gray-200 mb-6">
-              <div>
-                <span className="text-xs uppercase tracking-widest text-[#64748B] font-heading font-bold block">
-                  Acesso Imediato
-                </span>
-                <h1 className="text-2xl font-heading font-bold text-[#0B192C]">
-                  Canais Oficiais
-                </h1>
+          <div className="max-w-md mx-auto w-full flex flex-col justify-center my-auto space-y-3 xl:space-y-3.5 py-4">
+            
+            {/* Header com Logo no Lado Direito */}
+            <div className="flex flex-col items-center text-center">
+              <div className="relative w-full max-w-[440px] xl:max-w-[500px] h-36 xl:h-44 mb-2">
+                <Image
+                  src="/logo_sem_fundo_usarnomodoclaro.png"
+                  alt={OFFICE_INFO.name}
+                  fill
+                  priority
+                  className="object-contain object-center drop-shadow-xs"
+                  sizes="(min-width: 1280px) 500px, 440px"
+                />
               </div>
-              <Link
-                href="/"
-                className="text-xs font-heading text-[#0B192C] hover:text-[#64748B] transition-colors flex items-center gap-1 font-bold"
-              >
-                <span>Acessar Site</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
-              </Link>
+              <span className="font-heading uppercase text-[0.6875rem] tracking-widest text-[#64748B] block mb-0.5 font-bold">
+                Acesso Imediato
+              </span>
+              <h2 className="font-heading text-2xl xl:text-3xl font-bold text-[#0B192C]">
+                Canais de Atendimento
+              </h2>
+              <p className="font-body text-xs text-gray-500 mt-0.5">
+                Escolha o canal desejado para se comunicar diretamente com o Dr. Arthur Pacheco.
+              </p>
             </div>
 
-            <div className="space-y-3">
+            {/* Lista de Links */}
+            <div className="space-y-2">
               {quickLinks.map((item) => {
                 const Icon = item.icon;
-                return (
-                  <a
-                    key={item.id}
-                    href={item.href}
-                    target={item.href.startsWith("http") ? "_blank" : undefined}
-                    rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    className={`group flex items-center justify-between p-4 rounded-2xl border transition-all duration-300 ${
-                      item.highlight
-                        ? "bg-[#0B192C] text-white border-2 border-[#D1D5DB]/60 shadow-[0_4px_16px_rgba(11,25,44,0.3)] hover:bg-[#132238] hover:scale-[1.01]"
-                        : "bg-[#F8FAFC] hover:bg-[#EEF2F6] border-[#D1D5DB]/60 text-[#0B192C] hover:border-[#0B192C]"
-                    }`}
-                  >
-                    <div className="flex items-center gap-3.5">
+                const isInternal = item.href.startsWith("/");
+                const buttonClasses = `w-full p-3 xl:p-3.5 rounded-xl flex items-center justify-between group transition-all duration-300 border ${
+                  item.highlight
+                    ? "bg-[#0B192C] text-white border-2 border-[#D1D5DB]/60 hover:bg-[#132238] shadow-sm hover:shadow-md"
+                    : "bg-[#FFFFFF] text-[#0B192C] border-[#D1D5DB]/60 hover:border-[#0B192C] shadow-2xs hover:shadow-xs"
+                }`;
+
+                const content = (
+                  <>
+                    <div className="flex items-center gap-3">
                       <div
-                        className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-110 ${
-                          item.highlight ? "bg-white/20 text-[#D1D5DB]" : "bg-[#EEF2F6] border border-[#D1D5DB]/60 text-[#0B192C]"
+                        className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${
+                          item.highlight ? "bg-white/20 text-[#D1D5DB]" : "bg-[#EEF2F6] text-[#0B192C]"
                         }`}
                       >
-                        <Icon className="w-5 h-5" />
+                        <Icon className="w-4 h-4" />
                       </div>
-                      <div>
-                        <h2 className="font-heading font-bold text-sm tracking-wide leading-tight">
+                      <div className="text-left">
+                        <span className="font-heading text-sm font-bold block leading-snug">
                           {item.title}
-                        </h2>
-                        <p
-                          className={`text-xs mt-0.5 font-body ${
+                        </span>
+                        <span
+                          className={`font-body text-[0.6875rem] block ${
                             item.highlight ? "text-gray-200" : "text-[#64748B]"
                           }`}
                         >
                           {item.subtitle}
-                        </p>
+                        </span>
                       </div>
                     </div>
                     <ArrowUpRight
-                      className={`w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 ${
+                      className={`w-4 h-4 flex-shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 ${
                         item.highlight ? "text-white" : "text-[#64748B] group-hover:text-[#0B192C]"
                       }`}
                     />
+                  </>
+                );
+
+                return isInternal ? (
+                  <Link key={item.id} href={item.href} className={buttonClasses}>
+                    {content}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.id}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={buttonClasses}
+                  >
+                    {content}
                   </a>
                 );
               })}
             </div>
+
+            {/* Caixa de Especialidades (igual ao projeto C08-Sloane) */}
+            <div className="p-3.5 rounded-xl border border-[#D1D5DB]/60 bg-[#F8FAFC]">
+              <div className="flex items-center gap-1.5 text-[0.6875rem] uppercase tracking-wider font-heading text-[#0B192C] font-bold mb-1.5">
+                <Briefcase className="w-3.5 h-3.5 text-[#0B192C]" />
+                <span>Especialidades Jurídicas</span>
+              </div>
+              <div className="flex flex-wrap gap-1.5">
+                {specialties.map((spec, sIdx) => (
+                  <span
+                    key={sIdx}
+                    className="px-2 py-0.5 rounded-md text-[0.6875rem] font-body bg-white text-[#0B192C] border border-[#D1D5DB]/50 font-medium"
+                  >
+                    {spec}
+                  </span>
+                ))}
+              </div>
+            </div>
+
           </div>
 
-          <div className="pt-4 border-t border-gray-200 text-center">
-            <p className="text-xs text-gray-500 font-body">
-              © {new Date().getFullYear()} {OFFICE_INFO.name} • Todos os direitos reservados
-            </p>
+          <div className="text-center text-[0.6875rem] font-body text-gray-500 pt-2 border-t border-gray-200">
+            {OFFICE_INFO.address} • © {new Date().getFullYear()} {OFFICE_INFO.name}
           </div>
         </div>
       </div>
 
-      {/* ===================== VERSÃO MOBILE (100% Fit Sem Scroll + Linhas Geométricas Prateadas & Azul Escuro) ===================== */}
+      {/* ===================== VERSÃO MOBILE (100% Fit Sem Scroll + Logo Dobrada Centralizada) ===================== */}
       <div className="lg:hidden relative flex flex-col justify-between h-[100dvh] max-h-[100dvh] w-full px-4 py-3 sm:py-4 overflow-hidden bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6]">
         {/* Linhas Geométricas em Prateado e Cinza de Fundo */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
@@ -252,29 +283,34 @@ export default function LinksPage() {
           </svg>
         </div>
 
-        {/* Topo Mobile - Logo no tamanho e posição originais */}
-        <div className="relative z-10 w-full flex flex-col items-center text-center pt-2 pb-1">
-          <div className="relative h-20 w-48 mb-2 sm:mb-2.5">
+        {/* Topo Mobile - Logo Dobrada Centralizada + Linha Pequena de Áreas de Atuação */}
+        <div className="relative z-10 w-full flex flex-col items-center justify-center text-center pt-2 pb-1">
+          <div className="relative w-[92vw] max-w-[360px] h-32 sm:h-36 mb-1.5 flex items-center justify-center">
             <Image
               src="/logo_sem_fundo_usarnomodoclaro.png"
               alt={OFFICE_INFO.name}
               fill
               priority
-              className="object-contain"
-              sizes="200px"
+              className="object-contain object-center drop-shadow-xs"
+              sizes="(max-width: 768px) 360px, 300px"
             />
           </div>
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-xs border border-[#D1D5DB]/60 text-xs font-heading text-[#0B192C] mb-1.5 font-bold shadow-2xs">
-            <ShieldCheck className="w-3.5 h-3.5 text-[#0B192C]" />
-            <span>+6 Anos de Prática Especializada</span>
+
+          {/* Áreas de Atuação em uma Linha Pequena Compacta */}
+          <div className="flex flex-wrap items-center justify-center gap-1 sm:gap-1.5 max-w-sm mx-auto px-1">
+            {specialties.map((spec, i) => (
+              <span
+                key={i}
+                className="text-[0.625rem] px-2 py-0.5 rounded-full bg-[#EEF2F6] text-[#0B192C] font-body border border-[#D1D5DB]/60 font-semibold shadow-2xs"
+              >
+                {spec}
+              </span>
+            ))}
           </div>
-          <p className="text-xs text-[#64748B] font-body max-w-xs mx-auto leading-tight line-clamp-1">
-            {OFFICE_INFO.tagline}
-          </p>
         </div>
 
-        {/* Links Mobile - Distribuídos harmoniosamente ocupando o espaço sem folgas mortas */}
-        <div className="relative z-10 w-full flex-1 flex flex-col justify-between py-1.5 sm:py-2.5 max-w-md mx-auto">
+        {/* Links Mobile - Distribuídos harmoniosamente ocupando o espaço */}
+        <div className="relative z-10 w-full flex-1 flex flex-col justify-between py-2 max-w-md mx-auto">
           {quickLinks.map((item) => {
             const Icon = item.icon;
             return (
@@ -314,29 +350,9 @@ export default function LinksPage() {
           })}
         </div>
 
-        {/* Especialidades & Rodapé no Mobile */}
-        <div className="relative z-10 w-full max-w-md mx-auto pt-1 pb-1 space-y-1.5 sm:space-y-2">
-          {/* Card Áreas de Atuação */}
-          <div className="p-2 sm:p-2.5 rounded-xl bg-white/95 backdrop-blur-xs border border-[#D1D5DB]/50 text-center shadow-2xs">
-            <span className="text-[0.625rem] sm:text-[0.6875rem] font-heading uppercase tracking-widest text-[#0B192C] font-bold block mb-1">
-              Áreas de Atuação
-            </span>
-            <div className="flex flex-wrap justify-center gap-1 sm:gap-1.5">
-              {specialties.map((spec, i) => (
-                <span
-                  key={i}
-                  className="text-[0.625rem] sm:text-[0.6875rem] px-2.5 py-0.5 rounded-full bg-[#EEF2F6] text-[#0B192C] font-body border border-[#D1D5DB]/50 font-medium"
-                >
-                  {spec}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* Rodapé Mobile Compacto */}
-          <div className="text-center text-[0.625rem] sm:text-[0.6875rem] text-[#64748B] font-body">
-            <p>{OFFICE_INFO.addressShort} • © {new Date().getFullYear()} {OFFICE_INFO.name}</p>
-          </div>
+        {/* Rodapé Mobile Compacto */}
+        <div className="relative z-10 text-center text-[0.625rem] sm:text-[0.6875rem] text-[#64748B] font-body pt-1 pb-1">
+          <p>{OFFICE_INFO.addressShort} • © {new Date().getFullYear()} {OFFICE_INFO.name}</p>
         </div>
       </div>
     </main>

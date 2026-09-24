@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react";
 import { FAQ_DATA, OFFICE_INFO } from "@/lib/data";
-import { ChevronDown, HelpCircle } from "lucide-react";
+import { ChevronDown, HelpCircle, ArrowUpRight } from "lucide-react";
 import { WhatsAppIcon } from "@/components/SocialIcons";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -184,6 +184,25 @@ export function FaqSection() {
                     <p className="font-body text-xs sm:text-sm text-[var(--text-muted)] leading-relaxed pt-4">
                       {item.answer}
                     </p>
+
+                    {/* CTA para WhatsApp com Mensagem Personalizada */}
+                    <div className="pt-4 mt-4 border-t border-[var(--border-subtle)]/15 flex items-center justify-between flex-wrap gap-3">
+                      <span className="text-xs text-[var(--text-muted)] font-body">
+                        Ficou com dúvidas sobre este ponto?
+                      </span>
+                      <a
+                        href={`https://wa.me/${OFFICE_INFO.whatsappNumber}?text=${encodeURIComponent(
+                          `Olá, Dr. Arthur! Vi no FAQ a dúvida sobre "${item.question}" e gostaria de saber mais sobre o meu caso.`
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#0B192C] hover:bg-[#132238] text-white border border-[#D1D5DB]/60 text-xs font-heading font-semibold shadow-xs hover-lift transition-all cursor-pointer"
+                      >
+                        <WhatsAppIcon className="w-3.5 h-3.5 text-[#D1D5DB]" />
+                        <span>Saiba mais no WhatsApp</span>
+                        <ArrowUpRight className="w-3.5 h-3.5 text-[#D1D5DB]" />
+                      </a>
+                    </div>
                   </div>
                 )}
               </div>

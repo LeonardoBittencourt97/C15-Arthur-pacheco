@@ -81,17 +81,17 @@ export function Navbar() {
 
   return (
     <>
-      {/* 1. LOGO MOBILE FIXA SEPARADA - ALINHADA AO TOPO COM MÁXIMA NITIDEZ */}
-      <div className="lg:hidden fixed top-1 sm:top-1.5 left-2.5 sm:left-4 z-50 pointer-events-none">
+      {/* 1. LOGO MOBILE FIXA SEPARADA - ALINHADA AO TOPO COM MÁXIMA NITIDEZ (DOBRADA) */}
+      <div className="lg:hidden fixed top-1 sm:top-1.5 left-2 sm:left-3 z-50 pointer-events-none">
         <Link href="#inicio" className="flex items-center group focus:outline-none pointer-events-auto">
-          <div className="relative h-12 sm:h-14 w-28 sm:w-32 transition-transform duration-300 group-hover:scale-105">
+          <div className="relative h-20 sm:h-22 w-52 sm:w-60 transition-transform duration-300 group-hover:scale-105">
             <Image
               src={currentLogo}
               alt={OFFICE_INFO.name}
               fill
               priority
               className="object-contain object-left drop-shadow-md"
-              sizes="140px"
+              sizes="240px"
             />
           </div>
         </Link>
@@ -109,20 +109,20 @@ export function Navbar() {
           <div className="relative min-h-[2.5rem] sm:min-h-[3rem] flex items-center justify-between gap-2 sm:gap-4">
             
             {/* Espaçador Mobile para proteger a área da logo sem afetar os botões */}
-            <div className="lg:hidden w-28 sm:w-32 flex-shrink pointer-events-none" />
+            <div className="lg:hidden w-48 sm:w-56 flex-shrink pointer-events-none" />
 
-            {/* Logo Desktop: Desacoplada da altura da barra do menu (reduzida em ~50%) */}
-            <div className="hidden lg:flex items-center justify-start relative flex-shrink-0 w-28 xl:w-32 h-10 pointer-events-none">
+            {/* Logo Desktop: Desacoplada da altura da barra do menu (Tamanho Dobrado) */}
+            <div className="hidden lg:flex items-center justify-start relative flex-shrink-0 w-52 xl:w-60 h-16 xl:h-20 pointer-events-none">
               <div className="absolute left-0 top-1/2 -translate-y-1/2 pointer-events-auto">
                 <Link href="#inicio" className="flex items-center group focus:outline-none">
-                  <div className="relative h-10 xl:h-11 w-26 xl:w-30 transition-transform duration-300 group-hover:scale-105">
+                  <div className="relative h-16 xl:h-20 w-48 xl:w-56 transition-transform duration-300 group-hover:scale-105">
                     <Image
                       src={currentLogo}
                       alt={OFFICE_INFO.name}
                       fill
                       priority
                       className="object-contain object-left drop-shadow-sm"
-                      sizes="120px"
+                      sizes="240px"
                     />
                   </div>
                 </Link>
@@ -345,13 +345,13 @@ export function Navbar() {
         >
           <div>
             <div className="flex items-center justify-between pb-4 border-b border-[var(--border-subtle)]/25">
-              <div className="relative h-12 w-32">
+              <div className="relative h-20 w-56">
                 <Image
                   src={drawerLogo}
                   alt={OFFICE_INFO.name}
                   fill
                   className="object-contain object-left"
-                  sizes="140px"
+                  sizes="220px"
                 />
               </div>
               <button
