@@ -101,18 +101,24 @@ export default function LinksPage() {
             </span>
           </div>
 
-          {/* Logo Dobrada no Lado Esquerdo */}
+          {/* Logo Dobrada no Lado Esquerdo (Clique volta para a Home) */}
           <div className="relative z-10 my-auto py-2 flex flex-col items-center text-center w-full">
-            <div className="relative w-full max-w-[560px] xl:max-w-[650px] h-60 xl:h-72 mb-4">
-              <Image
-                src="/logo_sem_fundo_usarnomodoescuro.png"
-                alt={OFFICE_INFO.name}
-                fill
-                priority
-                className="object-contain object-center drop-shadow-md"
-                sizes="(min-width: 1280px) 650px, 560px"
-              />
-            </div>
+            <Link
+              href="/"
+              className="cursor-pointer block group focus:outline-none"
+              aria-label="Ir para a página inicial"
+            >
+              <div className="relative w-full max-w-[560px] xl:max-w-[650px] h-60 xl:h-72 mb-4 transition-transform duration-300 group-hover:scale-105">
+                <Image
+                  src="/logo_sem_fundo_usarnomodoescuro.png"
+                  alt={OFFICE_INFO.name}
+                  fill
+                  priority
+                  className="object-contain object-center drop-shadow-md"
+                  sizes="(min-width: 1280px) 650px, 560px"
+                />
+              </div>
+            </Link>
 
             <div className="h-0.5 w-16 bg-[#D1D5DB]/40 mb-4" />
 
@@ -135,18 +141,24 @@ export default function LinksPage() {
         <div className="bg-[#FFFFFF] flex flex-col justify-between p-6 xl:p-8 h-full overflow-y-auto">
           <div className="max-w-md mx-auto w-full flex flex-col justify-center my-auto space-y-3 xl:space-y-3.5 py-4">
             
-            {/* Header com Logo no Lado Direito */}
+            {/* Header com Logo no Lado Direito (Clique volta para a Home) */}
             <div className="flex flex-col items-center text-center">
-              <div className="relative w-full max-w-[440px] xl:max-w-[500px] h-36 xl:h-44 mb-2">
-                <Image
-                  src="/logo_sem_fundo_usarnomodoclaro.png"
-                  alt={OFFICE_INFO.name}
-                  fill
-                  priority
-                  className="object-contain object-center drop-shadow-xs"
-                  sizes="(min-width: 1280px) 500px, 440px"
-                />
-              </div>
+              <Link
+                href="/"
+                className="cursor-pointer block group focus:outline-none"
+                aria-label="Ir para a página inicial"
+              >
+                <div className="relative w-full max-w-[440px] xl:max-w-[500px] h-36 xl:h-44 mb-2 transition-transform duration-300 group-hover:scale-105">
+                  <Image
+                    src="/logo_sem_fundo_usarnomodoclaro.png"
+                    alt={OFFICE_INFO.name}
+                    fill
+                    priority
+                    className="object-contain object-center drop-shadow-xs"
+                    sizes="(min-width: 1280px) 500px, 440px"
+                  />
+                </div>
+              </Link>
               <span className="font-heading uppercase text-[0.6875rem] tracking-widest text-[#64748B] block mb-0.5 font-bold">
                 Acesso Imediato
               </span>
@@ -283,18 +295,24 @@ export default function LinksPage() {
           </svg>
         </div>
 
-        {/* Topo Mobile - Logo Dobrada Centralizada + Linha Pequena de Áreas de Atuação */}
+        {/* Topo Mobile - Logo Dobrada Centralizada (Clique volta para a Home) + Linha Pequena de Áreas de Atuação */}
         <div className="relative z-10 w-full flex flex-col items-center justify-center text-center pt-2 pb-1">
-          <div className="relative w-[92vw] max-w-[360px] h-32 sm:h-36 mb-1.5 flex items-center justify-center">
-            <Image
-              src="/logo_sem_fundo_usarnomodoclaro.png"
-              alt={OFFICE_INFO.name}
-              fill
-              priority
-              className="object-contain object-center drop-shadow-xs"
-              sizes="(max-width: 768px) 360px, 300px"
-            />
-          </div>
+          <Link
+            href="/"
+            className="cursor-pointer block group focus:outline-none"
+            aria-label="Ir para a página inicial"
+          >
+            <div className="relative w-[92vw] max-w-[360px] h-32 sm:h-36 mb-1.5 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+              <Image
+                src="/logo_sem_fundo_usarnomodoclaro.png"
+                alt={OFFICE_INFO.name}
+                fill
+                priority
+                className="object-contain object-center drop-shadow-xs"
+                sizes="(max-width: 768px) 360px, 300px"
+              />
+            </div>
+          </Link>
 
           {/* Áreas de Atuação em uma Linha Pequena Compacta */}
           <div className="flex flex-wrap items-center justify-center gap-1 sm:gap-1.5 max-w-sm mx-auto px-1">

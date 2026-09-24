@@ -20,15 +20,27 @@ export function Footer() {
           
           {/* Coluna 1: Logo e Apresentação (5 colunas) */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="relative h-20 sm:h-24 w-72 sm:w-80">
-              <Image
-                src="/logo_sem_fundo_usarnomodoescuro.png"
-                alt={OFFICE_INFO.name}
-                fill
-                className="object-contain object-left"
-                sizes="320px"
-              />
-            </div>
+            <Link
+              href="/"
+              onClick={(e) => {
+                if (typeof window !== "undefined" && (window.location.pathname === "/" || window.location.pathname === "")) {
+                  e.preventDefault();
+                  scrollToTop();
+                }
+              }}
+              className="block focus:outline-none group cursor-pointer"
+              aria-label="Voltar ao início da página"
+            >
+              <div className="relative h-20 sm:h-24 w-72 sm:w-80 transition-transform duration-300 group-hover:scale-105">
+                <Image
+                  src="/logo_sem_fundo_usarnomodoescuro.png"
+                  alt={OFFICE_INFO.name}
+                  fill
+                  className="object-contain object-left"
+                  sizes="320px"
+                />
+              </div>
+            </Link>
             
             <p className="font-body text-xs sm:text-sm text-gray-300 max-w-sm leading-relaxed">
               Atuação especializada e personalizada em Direito do Trabalho e Direito Previdenciário. Consultoria 100% digital, com cálculos precisos e suporte humanizado para clientes em todo o Brasil.

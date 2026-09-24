@@ -7,6 +7,7 @@ import { GraduationCap, Compass, Eye, ShieldCheck, MessageSquare, ChevronDown, S
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { GeometricLines } from "@/components/GeometricLines";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -124,7 +125,10 @@ export function About() {
       ref={sectionRef}
       className="py-16 sm:py-24 bg-[var(--bg-primary)] editorial-border-b w-full relative overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Linhas Geométricas Sutis de Fundo (Azul Escuro / Prateado) */}
+      <GeometricLines variant="about" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Cabeçalho da Seção */}
         <div
           ref={headerRef}

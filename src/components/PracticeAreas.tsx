@@ -6,6 +6,7 @@ import { CheckCircle2, ArrowUpRight, Scale, Briefcase, Calculator, Award, Chevro
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { GeometricLines } from "@/components/GeometricLines";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -120,9 +121,12 @@ export function PracticeAreas() {
     <section
       id="atuacao"
       ref={sectionRef}
-      className="py-16 sm:py-24 bg-[var(--bg-secondary)]/40 editorial-border-b w-full relative"
+      className="py-16 sm:py-24 bg-[var(--bg-secondary)]/40 editorial-border-b w-full relative overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Linhas Geométricas Sutis de Fundo (Azul Escuro / Prateado) */}
+      <GeometricLines variant="areas" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Cabeçalho */}
         <div
           ref={headerRef}

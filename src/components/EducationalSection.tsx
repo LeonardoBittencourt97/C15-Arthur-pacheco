@@ -7,6 +7,7 @@ import { WhatsAppIcon } from "@/components/SocialIcons";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { GeometricLines } from "@/components/GeometricLines";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -102,9 +103,12 @@ export function EducationalSection() {
     <section
       id="educativo"
       ref={sectionRef}
-      className="py-16 sm:py-24 bg-[var(--bg-secondary)]/35 editorial-border-b w-full relative"
+      className="py-16 sm:py-24 bg-[var(--bg-secondary)]/35 editorial-border-b w-full relative overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Linhas Geométricas Sutis de Fundo (Azul Escuro / Prateado) */}
+      <GeometricLines variant="educational" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Cabeçalho */}
         <div
           ref={headerRef}

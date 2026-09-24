@@ -79,11 +79,23 @@ export function Navbar() {
     setMobileAreasOpen(false);
   };
 
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (typeof window !== "undefined" && (window.location.pathname === "/" || window.location.pathname === "")) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <>
-      {/* 1. LOGO MOBILE FIXA SEPARADA - DESCONECTADA DO MENU E ELEVADA */}
+      {/* 1. LOGO MOBILE FIXA SEPARADA - DESCONECTADA DO MENU E ELEVADA (CLIQUE RETORNA AO TOPO DA PÁGINA INICIAL) */}
       <div className="lg:hidden fixed -top-3.5 sm:-top-4 left-2 sm:left-3 z-50 pointer-events-none">
-        <Link href="#inicio" className="flex items-center group focus:outline-none pointer-events-auto">
+        <Link
+          href="/"
+          onClick={handleLogoClick}
+          className="flex items-center group focus:outline-none pointer-events-auto"
+          aria-label="Ir para a página inicial"
+        >
           <div className="relative h-20 sm:h-22 w-52 sm:w-60 transition-transform duration-300 group-hover:scale-105">
             <Image
               src={currentLogo}
@@ -111,10 +123,15 @@ export function Navbar() {
             {/* Espaçador Mobile para proteger a área da logo sem afetar a altura dos botões */}
             <div className="lg:hidden w-44 sm:w-52 h-6 flex-shrink-0 pointer-events-none" />
 
-            {/* Logo Desktop: Totalmente Desacoplada da altura da barra do menu (+20% no tamanho) */}
+            {/* Logo Desktop: Totalmente Desacoplada da altura da barra do menu (+20% no tamanho, clique retorna ao topo) */}
             <div className="hidden lg:flex items-center justify-start relative flex-shrink-0 w-60 xl:w-72 h-10 pointer-events-none">
               <div className="absolute left-0 top-1/2 -translate-y-1/2 pointer-events-auto">
-                <Link href="#inicio" className="flex items-center group focus:outline-none">
+                <Link
+                  href="/"
+                  onClick={handleLogoClick}
+                  className="flex items-center group focus:outline-none"
+                  aria-label="Ir para a página inicial"
+                >
                   <div className="relative h-22 xl:h-26 w-60 xl:w-72 transition-transform duration-300 group-hover:scale-105">
                     <Image
                       src={currentLogo}
@@ -345,15 +362,25 @@ export function Navbar() {
         >
           <div>
             <div className="flex items-center justify-between pb-4 border-b border-[var(--border-subtle)]/25">
-              <div className="relative h-20 w-56">
-                <Image
-                  src={drawerLogo}
-                  alt={OFFICE_INFO.name}
-                  fill
-                  className="object-contain object-left"
-                  sizes="220px"
-                />
-              </div>
+              <Link
+                href="/"
+                onClick={(e) => {
+                  closeMobileMenu();
+                  handleLogoClick(e);
+                }}
+                className="focus:outline-none cursor-pointer block"
+                aria-label="Ir para a página inicial"
+              >
+                <div className="relative h-20 w-56">
+                  <Image
+                    src={drawerLogo}
+                    alt={OFFICE_INFO.name}
+                    fill
+                    className="object-contain object-left"
+                    sizes="220px"
+                  />
+                </div>
+              </Link>
               <button
                 type="button"
                 onClick={closeMobileMenu}

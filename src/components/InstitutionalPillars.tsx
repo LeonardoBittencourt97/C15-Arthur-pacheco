@@ -5,6 +5,7 @@ import { Award, UserCheck, Cpu, ShieldCheck } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { GeometricLines } from "@/components/GeometricLines";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -90,7 +91,10 @@ export function InstitutionalPillars() {
       ref={sectionRef}
       className="w-full border-b border-[var(--border-subtle)]/30 bg-[var(--bg-secondary)]/50 py-10 sm:py-14 relative shadow-2xs overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Linhas Geométricas Sutis de Fundo (Azul Escuro / Prateado) */}
+      <GeometricLines variant="pillars" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="relative flex items-center justify-between pb-4 border-b border-[var(--border-subtle)]/25 mb-8 text-[var(--text-muted)]">
           {/* Linha Prateada / Azul Escuro desenhada pelo scroll */}
           <div
