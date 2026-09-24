@@ -89,21 +89,21 @@ export function Navbar() {
   return (
     <>
       {/* 1. LOGO MOBILE FIXA SEPARADA - DESCONECTADA DO MENU E ELEVADA (CLIQUE RETORNA AO TOPO DA PÁGINA INICIAL) */}
-      <div className="lg:hidden fixed -top-3.5 sm:-top-4 left-2 sm:left-3 z-50 pointer-events-none">
+      <div className="lg:hidden fixed -top-3.5 sm:-top-4 left-2 sm:left-3 z-30 pointer-events-none">
         <Link
           href="/"
           onClick={handleLogoClick}
           className="flex items-center group focus:outline-none pointer-events-auto"
           aria-label="Ir para a página inicial"
         >
-          <div className="relative h-20 sm:h-22 w-52 sm:w-60 transition-transform duration-300 group-hover:scale-105">
+          <div className="relative h-20 sm:h-22 w-36 sm:w-40 max-w-[42vw] transition-transform duration-300 group-hover:scale-105">
             <Image
               src={currentLogo}
               alt={OFFICE_INFO.name}
               fill
               priority
               className="object-contain object-left drop-shadow-md"
-              sizes="240px"
+              sizes="(max-width: 640px) 160px, 180px"
             />
           </div>
         </Link>
@@ -121,7 +121,7 @@ export function Navbar() {
           <div className="relative min-h-[2.5rem] sm:min-h-[3rem] flex items-center justify-between gap-2 sm:gap-4">
             
             {/* Espaçador Mobile para proteger a área da logo sem afetar a altura dos botões */}
-            <div className="lg:hidden w-44 sm:w-52 h-6 flex-shrink-0 pointer-events-none" />
+            <div className="lg:hidden w-36 sm:w-40 max-w-[42vw] h-6 flex-shrink-0 pointer-events-none" />
 
             {/* Logo Desktop: Totalmente Desacoplada da altura da barra do menu (+20% no tamanho, clique retorna ao topo) */}
             <div className="hidden lg:flex items-center justify-start relative flex-shrink-0 w-60 xl:w-72 h-10 pointer-events-none">
@@ -313,8 +313,8 @@ export function Navbar() {
               </Link>
             </nav>
 
-            {/* Ações à Direita: Tema + WhatsApp + Menu Mobile */}
-            <div className="flex items-center gap-1.5 sm:gap-3 flex-shrink-0">
+            {/* Ações à Direita: Tema + WhatsApp + Menu Mobile (Camada Z prioritária para cliques/toques) */}
+            <div className="relative z-20 flex items-center gap-1.5 sm:gap-3 flex-shrink-0">
               <ThemeToggle />
 
               <a
